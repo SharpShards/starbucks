@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+:root{
+    --principal: #117050;
+    --secundaria: #989898;
+
+    --font_h: 'Oswald', sans-serif;
+    --font_p: 'Open Sans', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+cite,
+img{
+    color: #000;
+}
+
+h2{
+    font-size: 4rem;
+    font-family: var(--font_h);
+
+    line-height: 5rem;
+}
+
+h2::before{
+    content: '';
+
+    display: block;
+
+    height: 20px;
+    width: 180px;
+
+    background-color: var(--principal);
+
+    margin-bottom: 10px;
+}
+
+p,
+cite{
+    font-size: 1.6rem;
+    font-family: var(--font_p);
+    font-weight: 400;
+}
+
+section button{
+    width: fit-content;
+
+    background-color: transparent;
+
+    color: #454545;
+    font-size: 1.8rem;
+    font-family: var(--font_p);
+
+    border: 2px solid #454545;
+    border-radius: 2px;
+
+    margin-top: 40px;
+
+    padding: 10px 30px;
+}
+
+section button:hover{
+    cursor: pointer;
+
+    background-color: #454545;
+
+    color: #FFF;
+}
+
+header{
+    display: flex;
+
+    height: 100px;
+    width: 100%;
+
+    border-top: 10px solid var(--principal);
+
+    padding-left: 100px;
+    padding-right: 100px;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .imgLogo{
+    height: 70px;
+}
+
+header .dvSub{
+    display: flex;
+
+    height: fit-content;
+    width: fit-content;
+}
+
+header .dvSub form{
+    display: flex;
+
+    height: fit-content;
+    width: fit-content;
+
+    border: 1px solid var(--secundaria);
+
+    margin-right: 60px;
+}
+
+header .dvSub input{
+    height: 40px;
+    width: 200px;
+
+    color: #000;
+    font-size: 1.6rem;
+    font-family: var(--font_p);
+    font-style: normal;
+
+    margin-right: 10px;
+
+    padding: 10px;
+}
+
+header .dvSub input::placeholder{
+    color: var(--secundaria);
+}
+
+header .dvSub button{
+    height: 40px;
+}
+
+header .dvSub button img{
+    height: 100%;
+}
+
+header .imgIcon{
+    height: 40px;
+}
+
+header .imgIcon:hover{
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+
+    height: fit-content;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+section{
+    width: 100%;
+}
+
+#sctBanner{
+    display: flex;
+
+    height: 100vh;
+    
+    background-image: url('../images/media/bg.jpg');
+    background-size: cover;
+    background-position: center;
+
+    padding-left: 100px;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sctBanner h1{
+    font-size: 10rem;
+    font-family: var(--font_h);
+
+    line-height: 12rem;
+}
+
+#sctBanner p{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#sctBanner .dvFundo{
+    display: flex;
+
+    height: fit-content;
+    width: 600px;
+
+    justify-content: space-between;
+}
+
+#sctBanner .dvCard{
+    height: 160px;
+    width: 160px;
+
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 5px solid var(--principal);
+    border-radius: 50%;
+}
+
+#sctBanner .dvCard:first-child{
+    background-image: url('../images/media/c1.jpg');
+}
+
+#sctBanner .dvCard:nth-child(2){
+    background-image: url('../images/media/c2.jpg');
+}
+
+#sctBanner .dvCard:last-child{
+    background-image: url('../images/media/c3.jpg');
+}
+
+#sctIntro{
+    display: grid;
+
+    height: calc(100vh + 200px);
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr;
+
+    grid-template-areas: 
+        'texto mulher'
+        'bebidas mulher';
+}
+
+.dvText{
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sctIntro .dvText{
+    grid-area: texto;
+
+    padding: 50px;
+    padding-left: 100px;
+}
+
+#sctIntro .dvText cite{
+    display: block;
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#sctIntro .dvText p{
+    line-height: 3rem;
+
+    padding-right: 120px;
+}
+
+#sctIntro .dvMulher{
+    grid-area: mulher;
+
+    background-image: url('../images/media/f1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sctIntro .dvBebidas{
+    grid-area: bebidas;
+
+    background-image: url('../images/media/f2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sctExplic{
+    display: grid;
+
+    height: calc(100vh + 300px);
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-template-areas: 
+        'bebida texto'
+        'bebida copo';
+}
+
+#sctExplic .dvBebida{
+    grid-area: bebida;
+
+    background-image: url('../images/media/f3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sctExplic .dvText{
+    grid-area: texto;
+
+    padding: 50px;
+    padding-left: 100px;
+}
+
+#sctExplic .dvText h2{
+    font-size: 3.4rem;
+
+    line-height: 4rem;
+
+    margin-bottom: 20px;
+}
+
+#sctExplic .dvText p{
+    line-height: 3rem;
+
+    padding-right: 120px;
+}
+
+#sctExplic .dvText button{
+    margin-top: 20px;
+}
+
+#sctExplic .dvCopo{
+    grid-area: copo;
+
+    background-image: url('../images/media/f4.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#sctNovaBebida{
+    display: grid;
+
+    height: calc(100vh + 100px);
+    width: 100%;
+    
+    grid-template-columns: repeat(2,1fr);
+}
+
+#sctNovaBebida div{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sctNovaBebida .dvText{
+    background-image: url('../images/media/bg2.jpg');
+    background-position: left;
+
+    padding: 100px;
+
+    justify-content: start;
+}
+
+#sctNovaBebida .dvText h2::before{
+    display: none;
+}
+
+#sctNovaBebida .dvText p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#sctNovaBebida .dvText button{
+    width: fit-content;
+}
+
+#sctNovaBebida .dvMulher{
+    background-image: url('../images/media/f5.jpg');
+    background-position: center;
+}
+
+#sctBebidas{
+    display: grid;
+
+    height: calc(100vh + 100px);
+    width: 100%;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+#sctBebidas .dvText{
+    display: flex;
+
+    background-color: #e8e9ee;
+
+    padding-left: 100px;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sctBebidas .dvText p{
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+#sctBebidas .dvText button{
+    width: fit-content;
+}
+
+#sctBebidas .dvBebida{
+    background-image: url('../images/media/bg3.jpg');
+    background-size:cover;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+#sctBanFinal{
+    height: calc(100vh - 200px);
+    width: 100%;
+
+    background-image: url('../images/media/bg4.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+footer{
+    display: flex;
+
+    height: 200px;
+    width: 100%;
+
+    background-color: #454545;
+
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: #FFF;
+    font-size: 2rem;
+
+    line-height: 4rem;
+}
+
+footer a{
+    color: #FFF;
+
+    text-decoration: none;
+}
+
+footer a:hover{
+    cursor: pointer;
+
+    color: var(--principal);
+}
+
+@media(max-width: 1140px){
+    #sctBanner{
+        padding-left: 50px;
+    }
+
+    #sctBanner h1{
+        font-size: 9rem;
+
+        line-height: 10rem;
+
+        margin-top: 60px;
+    }
+
+    #sctBanner p{
+        font-size: 1.8rem;
+    }
+
+    #sctBanner .dvFundo{
+        margin-top: 80px;    
+    }
+
+    #sctIntro{
+        grid-template-columns: 2fr 1fr;
+    }
+
+    #sctIntro .dvText,
+    #sctExplic .dvText,
+    #sctNovaBebida .dvText,
+    #sctBebidas .dvText{
+        padding-left: 40px;
+    } 
+
+    #sctExplic{
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #sctNovaBebida .dvText{
+        padding-top: 40px;
+    }
+
+    #sctBebidas{
+        grid-template-columns: 1.2fr 1fr;
+    }
+
+    #sctBebidas .dvBebida{
+        background-position: -100px;
+    }
+
+    #sctBanFinal{
+        background-position: bottom right;
+    }
+}
+
+@media(max-width: 750px){
+    header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    header .dvSub form{
+        margin-right: 20px;
+    }
+
+    header .dvSub input{
+        width: 80px;
+    }
+
+    #sctBanner{
+        padding-left: 20px;
+    }
+
+    #sctBanner h1{
+        font-size: 4rem;
+
+        line-height: 5rem;
+
+        margin-top: 0px;
+    }
+
+    #sctBanner p{
+        margin-top: 20px;
+
+        padding-right: 40px;
+    }
+
+    #sctBanner .dvFundo{
+        width: 280px;
+
+        margin-top: 40px;
+
+        justify-content: space-around;
+    }
+
+    #sctBanner .dvCard{
+        height: 120px;
+        width: 120px;
+
+        border-width: 2px;
+    }
+
+    #sctBanner .dvCard:last-child{
+        display: none;
+    }
+
+    #sctIntro{
+        height: calc(100vh + 400px);
+        grid-template-columns: 1fr;
+    }
+
+    #sctIntro .dvText,
+    #sctExplic .dvText,
+    #sctNovaBebida .dvText,
+    #sctBebidas .dvText{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #sctIntro .dvText p,
+    #sctExplic .dvText p{
+        padding-right: 0;
+    }
+
+    #sctIntro .dvMulher,
+    #sctExplic .dvBebida,
+    #sctNovaBebida .dvMulher,
+    #sctBebidas .dvBebida{
+        display: none;
+    }
+
+    #sctExplic,
+    #sctNovaBebida,
+    #sctBebidas{
+        grid-template-columns: 1fr;
+    }
+
+    #sctBebidas{
+        height: 100vh;
+    }
+
+    #sctBebidas .dvText p{
+        margin-right: 0;
+    }
+
+    #sctNovaBebida{
+        height: fit-content;
+    }
+
+    footer{
+        height: 100px;
+    }
+
+    footer p{
+        font-size: 1.4rem;
+
+        line-height: 2.6rem;
+    }
+}
