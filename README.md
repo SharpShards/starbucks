@@ -1,5 +1,16 @@
-# starbucks
+# Starbucks
 
-version 1
+## Screenshots
 
-Landing Page sobre o Starbucks
+## Descrição
+
+Versão 1
+
+Esse projeto é uma landing page criada para aprimorar conhecimentos de HTML e CSS. O site mostra fotos, produtos, novidades e descrições sobre a empresa Starbucks.
+
+*Status: Finalizado*
+
+## Tecnologias
+
+- HTML
+- CSS
